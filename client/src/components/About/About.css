@@ -1,0 +1,63 @@
+/*ito  yung pinaka  main div nung about section yung may shadow*/
+.about-section{
+    box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
+    -webkit-box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
+    -moz-box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
+    margin-top: 50px;
+    height: 500px;
+}
+
+/*ito  ay darkmode which is nilagyan ng design yung  main div ng about section*/
+#dark .about-section{
+    box-shadow: none;
+    background-color: #38004C;
+    box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
+    -webkit-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
+
+}
+
+/*ito yung sa design ng image dun sa about section*/
+.about-image img{
+    height: 300px;
+    width: 300px;
+    border-radius: 190px;
+    margin-top: 50px;
+    margin-left: 40px;
+    border: 5px solid yellow;
+    object-fit: cover;
+   
+
+
+
+}
+/*ito  yung design sa descript nung info sa about section*/
+.about-details{
+    margin-top: 50px;
+    margin-right: 20px;
+
+
+}
+/*title nung about section*/
+.about-title h5{
+    text-align: center;
+
+}
+/*line dun sa baba nung title*/
+.line{
+    display: block;
+    width: 70px;
+    height:3px;
+    margin: 1px auto;
+    background-color: yellowgreen;
+}
+
+/*para responsive*/
+@media (max-width:1000px) {
+    .about-section{
+        height: auto;
+
+    }
+
+    
+}

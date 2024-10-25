@@ -1,0 +1,168 @@
+/*ito  yung para sa pinakapinaglalagyan nung home*/
+.home{
+    height: 400px;
+    color: white;  
+  
+}
+/*ito  yung content mismo sizing para dun sa ilalagay na content*/
+.home-content {
+    padding: 120px;
+    margin-top: 200px;  /* Increased from 100px to 150px */
+
+}
+
+
+/*dito  yung kulay yellow na text sa home yung may future enginner*/
+.home-content h3{
+    margin-top: 20px;
+    color: rgb(241, 227, 20);
+
+}
+/*ito  yung design dun sa ddiv kung saan nakalagay  yung dalawang button*/
+.button-for-action{
+    display: flex;
+
+}
+.button-for-action a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*dito yung para sa hire me button*/
+.hire-me-button{
+    background-color: #ff854f;
+    text-align: center;
+    width: 180px;
+    padding: 10px;
+    border-radius:90px ;
+    cursor:pointer ;
+    margin-top: 10px;
+    border: 2px solid white;
+    font-size: 17px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+/*dito  naman yung sa hover para sa hire me*/
+.hire-me-button:hover{
+    background-color: white;
+    width: 250px;
+    color: black;
+    transition: duration 1s; 
+
+
+}
+/*dito naman yung sa resume button*/
+.get-resume-button{
+    background-color:orangered;
+    text-align: center;
+    width: 180px;
+    padding: 10px;
+    border-radius:90px ;
+    cursor:pointer ;
+    margin-top: 10px;
+    border: 2px solid yellow;
+    font-size: 17px;
+    margin-left:10px ;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+/*ito  yunf hover para dun sa resume button*/
+.get-resume-button:hover{
+    background-color: rgb(248, 214, 18);
+    width: 250px;
+    color: black;
+    transition: duration 1s; 
+
+}
+/*ito  naman dun sa may hyperlink na design yung word na resume*/
+.get-resume-button a{
+    text-decoration: none;
+    color: black;
+}
+
+/*ito yung yung ginawa kong shape para lagyan ng icon na darkmode and light mode*/
+
+.theme-change{
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: #001cce;
+    right: 0;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    position: fixed;
+    margin-top: 250px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+
+
+
+}
+/*ito  yung para dun sa design sa sun na icon  tapos yung  may keyframes yun yung sa rotation nung sun*/
+.sun-theme-icon{
+    animation: rotation infinite 5s linear;
+
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+
+.glitch-text {
+  position: relative;
+  color: #ffffff;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  /* Adjust text-shadow color if needed */
+  text-shadow: 0.05em 0 0 rgba(255,0,0,0.75),
+              -0.025em -0.05em 0 rgba(0,255,0,0.75),
+              0.025em 0.05em 0 rgba(0,0,255,0.75);
+  animation: glitch 500ms infinite;
+  margin-top: 40px;  /* Added margin-top */
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255,0,0,0.75),
+                -0.05em -0.025em 0 rgba(0,255,0,0.75),
+                -0.025em 0.05em 0 rgba(0,0,255,0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255,0,0,0.75),
+                -0.05em -0.025em 0 rgba(0,255,0,0.75),
+                -0.025em 0.05em 0 rgba(0,0,255,0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255,0,0,0.75),
+                0.025em 0.025em 0 rgba(0,255,0,0.75),
+                -0.05em -0.05em 0 rgba(0,0,255,0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255,0,0,0.75),
+                0.025em 0.025em 0 rgba(0,255,0,0.75),
+                -0.05em -0.05em 0 rgba(0,0,255,0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255,0,0,0.75),
+                0.05em 0 0 rgba(0,255,0,0.75),
+                0 -0.05em 0 rgba(0,0,255,0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255,0,0,0.75),
+                0.05em 0 0 rgba(0,255,0,0.75),
+                0 -0.05em 0 rgba(0,0,255,0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255,0,0,0.75),
+                -0.025em -0.025em 0 rgba(0,255,0,0.75),
+                -0.025em -0.05em 0 rgba(0,0,255,0.75);
+  }
+}

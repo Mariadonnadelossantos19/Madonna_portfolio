@@ -1,0 +1,124 @@
+.certificate-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.certificate-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-preview {
+    height: 200px;
+    overflow: hidden;
+}
+
+.certificate-preview embed {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.certificate-name {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+    .certificate-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark mode styles */
+#dark .certificate-section {
+    background-color: #46045e;
+}
+
+#dark .section-title {
+    color: #ffffff;
+}
+
+#dark .certificate-item {
+    background-color: #38004C;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+#dark .certificate-item:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+#dark .certificate-name {
+    color: #ffffff;
+}
+
+.load-more-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.load-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.load-more-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#dark .load-more-btn {
+    background-color: #38004C;
+}
+
+#dark .load-more-btn:hover {
+    background-color: #4a0063;
+}
