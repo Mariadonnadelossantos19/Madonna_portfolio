@@ -16,6 +16,7 @@ import Certificate15 from '../Certificate/Digital_Certificate/Topic4_Ma. Donna F
 import Certificate16 from '../Certificate/Digital_Certificate/Topic2_Ma. Donna Fidelino_20241023_110727_0000.pdf'
 import Certificate17 from '../Certificate/Digital_Certificate/Topic3_Ma. Donna Fidelino_20241023_110604_0000.pdf'
 import Certificate18 from '../Certificate/Digital_Certificate/Topic1_Ma. Donna Fidelino_20241023_110815_0000.pdf'
+import Certificate19 from '../Certificate/Digital_Certificate/donna.jpg'
 import Fade from 'react-reveal/Fade';
 
 // Import all PDF file
@@ -26,6 +27,18 @@ const Certificate = () => {
     const [visibleCertificates, setVisibleCertificates] = useState(3);
 
     const certificates = [
+        { 
+            id: 19, 
+            name: "The Digital Playbook", 
+            file: Certificate19,
+            type: 'image',
+            style: {
+                width: '100%',
+                height: '300px',
+                objectFit: 'contain',
+                backgroundColor: '#fff'
+            }
+        },
         { id: 1, name: "Basic level of software engineering", file: Certificate1 },
         { id: 12, name: "Programming for Beginners Using Python", file: Certificate12 },
         { id: 13, name: "Programming for Intermediate Users Using Python", file: Certificate13 },
@@ -42,6 +55,7 @@ const Certificate = () => {
         { id: 16, name: " “The ICT Profciency Examination Your Gateway to Eligibility” ", file: Certificate16 },
         { id: 17, name: "“Money Moves: Gen Z’s Guide to Financial Success”  ", file: Certificate17 },
         { id: 18, name: " Exploring the Role of CAD in Structural Desig n: Tools, Techniques, and Trends", file: Certificate18 },
+    
     ];
     const handleCertificateClick = (cert) => {
         setSelectedCertificate(cert);
@@ -63,12 +77,20 @@ const Certificate = () => {
                         {certificates.slice(0, visibleCertificates).map((cert) => (
                             <div key={cert.id} className="certificate-item" onClick={() => handleCertificateClick(cert)}>
                                 <div className="certificate-preview">
-                                    <embed 
-                                        src={cert.file} 
-                                        type="application/pdf" 
-                                        width="100%" 
-                                        height="100%" 
-                                    />
+                                    {cert.type === 'image' ? (
+                                        <img 
+                                            src={cert.file} 
+                                            alt={cert.name}
+                                            style={cert.style || {}}
+                                        />
+                                    ) : (
+                                        <embed 
+                                            src={cert.file} 
+                                            type="application/pdf" 
+                                            width="100%" 
+                                            height="100%" 
+                                        />
+                                    )}
                                 </div>
                                 <h3 className="certificate-name">{cert.name}</h3>
                             </div>
@@ -86,12 +108,24 @@ const Certificate = () => {
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <span className="close" onClick={() => setSelectedCertificate(null)}>&times;</span>
                         <h3>{selectedCertificate.name}</h3>
-                        <embed 
-                            src={selectedCertificate.file} 
-                            type="application/pdf" 
-                            width="100%" 
-                            height="600px" 
-                        />
+                        {selectedCertificate.type === 'image' ? (
+                            <img 
+                                src={selectedCertificate.file} 
+                                alt={selectedCertificate.name}
+                                style={{ 
+                                    width: '100%',
+                                    maxHeight: '600px',
+                                    objectFit: 'contain'
+                                }}
+                            />
+                        ) : (
+                            <embed 
+                                src={selectedCertificate.file} 
+                                type="application/pdf" 
+                                width="100%" 
+                                height="600px" 
+                            />
+                        )}
                     </div>
                 </div>
             )}
