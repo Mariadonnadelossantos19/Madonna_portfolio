@@ -1,6 +1,6 @@
 import React from "react";
 import "./SidebarList.css";
-import profilepic from "../../Image/a.jpg";
+import profilepic from "../../Image/profile.JPG";
 import { FcHome, FcAbout,FcContacts, FcFactory,FcTodoList,FcSalesPerformance,FcNightPortrait} from "react-icons/fc";
 import { GrCertificate } from "react-icons/gr";
 

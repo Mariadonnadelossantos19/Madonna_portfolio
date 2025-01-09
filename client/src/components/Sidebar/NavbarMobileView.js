@@ -97,14 +97,14 @@ const handleClick = ()=>{
                </li>
 
 
-               <li className="nav-item">
+               <li className="nav-item-mobileview">
                   <Link to="certificate"  
                   spy={true}
                   smooth={true}
                   duration={100}
                   offset={-100}
                   >
-                  <GrCertificate size={25}/>
+                  <GrCertificate size={25}/>Certificate
                   </Link>
                </li>
                <li className="nav-item-mobileview"> 

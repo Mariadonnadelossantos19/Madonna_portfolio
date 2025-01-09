@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 import Typewriter from 'typewriter-effect';
 import MyCv from './cv.pdf'
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { IoSunny } from "react-icons/io5";
 import Fade from 'react-reveal/Fade';
-import {Link} from "react-scroll"
-
 
 const Home = ({theme,changeTheme})=>{
     return (
@@ -24,7 +22,7 @@ const Home = ({theme,changeTheme})=>{
             <h3>
                     <Typewriter
         options={{
-            strings: ['From BSI/T -3F', 'Future Full Stack Developer', 'Future Software Engineer'],
+            strings: ['From BSI/T -4F', 'Future Full Stack Developer', 'Future Software Engineer'],
             
             autoStart: true,
             loop: true, 
@@ -45,8 +43,6 @@ const Home = ({theme,changeTheme})=>{
         </div>
     </div>
 </Fade>
-
-
 
         </div>
 
